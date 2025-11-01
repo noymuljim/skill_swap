@@ -15,6 +15,7 @@ const Navbar = () => {
     return (
         <div className="navbar bg-base-100 ">
             <MyContainer className='flex justify-between items-center'>
+                
                   <div className="navbar-start">
                 <div className="dropdown">
                     <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -35,7 +36,7 @@ const Navbar = () => {
             </div>
             <div className="flex gap-4 items-center">
                 <img className='w-[33px] h-[33px] rounded-full' src="https://img.icons8.com/parakeet/48/user.png" alt="" />
-                <Link className="btn rounded-3xl px-10" to="/">Login</Link>
+                <Link className="btn rounded-3xl px-10" to="auth/login">Login</Link>
               
             </div>
             </MyContainer>
