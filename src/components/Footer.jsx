@@ -17,7 +17,6 @@ const Footer = () => {
           <a className="link link-hover">UI/UX</a>
           <a className="link link-hover">Design</a>
           <a className="link link-hover">Web Dev</a>
-          <a className="link link-hover">Guiter</a>
         </nav>
 
         <nav className='flex flex-col text-center space-y-5 md:space-y-0 md:text-left'>

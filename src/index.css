@@ -9,11 +9,11 @@
  @plugin "daisyui/theme" {
   name: "light";
   default: true;
-  --color-primary: #003220;
-  --color-secondary: #1f1f1f;
-  --color-base-200: #90ed91;
-  --color-base-300: #01563f;
-  --color-accent:#e6e5e5;
+  --color-primary: #1f1f1f;
+  --color-secondary: #046120;
+  --color-base-200: #EAEAEA;
+  --color-base-300: #BABABA;
+  --color-accent:#403F3F;
 }
 
 /* a.active{

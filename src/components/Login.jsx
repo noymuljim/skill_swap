@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import MyContainer from './MyContainer';
 import { FaEye, FaEyeSlash } from 'react-icons/fa';
 import { Link } from 'react-router';
-import signinLogo from'../assets/signin1.png'
+// import signinLogo from'../assets/signin1.png'
 
 const Login = () => {
         const [show, setShow] = useState(false)

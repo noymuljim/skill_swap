@@ -6,7 +6,7 @@ import { Link } from 'react-router';
 
 const Navbar = () => {
     const links=<>
-    <div className='space-x-5 flex flex-col md:flex-row'>
+    <div className='space-x-5 mr-10 flex flex-col md:flex-row'>
             <MyLinks to={'/'}>Home</MyLinks>
             <MyLinks to={'/profile'}>Profile</MyLinks>
         </div>
@@ -36,7 +36,7 @@ const Navbar = () => {
             </div>
             <div className="flex gap-4 items-center">
                 <img className='w-[33px] h-[33px] rounded-full' src="https://img.icons8.com/parakeet/48/user.png" alt="" />
-                <Link className="btn rounded-3xl px-10" to="auth/login">Login</Link>
+                <Link className="btn rounded-3xl px-10 bg-primary text-white" to="auth/login">Login</Link>
               
             </div>
             </MyContainer>
