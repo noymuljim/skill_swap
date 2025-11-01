@@ -3,7 +3,7 @@ import React from 'react';
 const TopProvider = () => {
   return (
     <div className='flex gap-[300px]'>
-      <div className="min-w-[250px] bg-white rounded-2xl shadow hover:shadow-lg transition p-5 flex flex-col items-center text-center">
+      <div className=" min-w-[250px] bg-white rounded-2xl shadow hover:shadow-lg transition p-5 flex flex-col items-center text-center">
         <img
           src="https://i.ibb.co.com/KgCcxSM/images.jpg"
           alt="Nina Zhang"

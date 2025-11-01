@@ -1,10 +1,12 @@
 import { createBrowserRouter } from "react-router";
 import MainLayout from "./MainLayout";
 import Profile from "../pages/Profile";
-import Home from "../pages/Home";
 import AuthLayout from "./AuthLayout";
 import Login from "../components/Login";
 import Register from "../components/Register";
+import Home from "../pages/Home";
+import CategoryNews from "../components/HomeLayout/CategoryNews";
+import Details from "../components/HomeLayout/Details";
 
 export const router = createBrowserRouter([
   {
@@ -18,7 +20,17 @@ export const router = createBrowserRouter([
       {
         path: '/profile',
         element: <Profile></Profile>
+      },
+      {
+        path: '/category/:id',
+        element: <CategoryNews></CategoryNews>,
+        loader: ()=> fetch("/SkillsData.json")
+      },
+      {
+        path:'/skillDetails/:id',
+        element:<Details></Details>
       }
+     
     ]
   },
   {

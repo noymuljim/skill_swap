@@ -1,6 +1,6 @@
 [
   {
-    "skillId": 1,
+    "id": 1,
     "skillName": "Beginner Guitar Lessons",
     "providerName": "Alex Martin",
     "providerEmail": "alex@skillswap.com",
@@ -8,23 +8,23 @@
     "rating": 4.8,
     "slotsAvailable": 3,
     "description": "Acoustic guitar classes for complete beginners.",
-    "image": "https://i.postimg.cc/example1.png",
+    "image": "https://i.ibb.co.com/gFXrnFJ2/Black-Simple-Cyber-Security-Instagram-Post.png",
     "category": "Music"
   },
   {
-    "skillId": 2,
-    "skillName": "Spoken English Practice",
+    "id": 2,
+    "skillName": "IELTS Practice",
     "providerName": "Sara Hossain",
     "providerEmail": "sara@skillswap.com",
     "price": 10,
     "rating": 4.6,
     "slotsAvailable": 5,
     "description": "Conversational English sessions for non-native speakers.",
-    "image": "https://i.postimg.cc/example2.png",
+    "image": "https://i.ibb.co.com/21FkL2gb/Blue-and-Black-Modern-Digital-Marketing-Agency-Instagram-Post.png",
     "category": "Language"
   },
   {
-    "skillId": 3,
+    "id": 3,
     "skillName": "Basic Photography Workshop",
     "providerName": "Liam Carter",
     "providerEmail": "liam@skillswap.com",
@@ -32,23 +32,23 @@
     "rating": 4.7,
     "slotsAvailable": 4,
     "description": "Learn to use DSLR cameras and compose stunning photos with natural light.",
-    "image": "https://i.postimg.cc/bYdM7WNH/photography-class.png",
+    "image": "https://i.ibb.co.com/TqnxxvFn/Black-Simple-Cyber-Security-Instagram-Post-1.png",
     "category": "Art & Design"
   },
   {
-    "skillId": 4,
-    "skillName": "Intro to Python Programming",
+    "id": 4,
+    "skillName": "Intro to App Development",
     "providerName": "Nina Zhang",
     "providerEmail": "nina@skillswap.com",
     "price": 30,
     "rating": 4.9,
     "slotsAvailable": 2,
-    "description": "Hands-on Python course covering the basics of coding, loops, and data types.",
-    "image": "https://i.postimg.cc/ZnDqfLVx/python-course.png",
+    "description": "Hands-on App Development course covering the basics of java Language.",
+    "image": "https://i.ibb.co.com/GQ4GcWj5/Green-and-Pale-Yellow-Simple-Food-Apps-Instagram-Post.png",
     "category": "Technology"
   },
   {
-    "skillId": 5,
+    "id": 5,
     "skillName": "Yoga for Beginners",
     "providerName": "Ravi Mehta",
     "providerEmail": "ravi@skillswap.com",
@@ -56,11 +56,11 @@
     "rating": 4.5,
     "slotsAvailable": 6,
     "description": "Morning yoga classes focusing on flexibility and mindfulness for all levels.",
-    "image": "https://i.postimg.cc/wvDkG8M9/yoga-beginner.png",
+    "image": "https://i.ibb.co.com/dNp7Rxp/Black-Simple-Cyber-Security-Instagram-Post-2.png",
     "category": "Health & Fitness"
   },
   {
-    "skillId": 6,
+    "id": 6,
     "skillName": "Creative Writing Workshop",
     "providerName": "Emily Dawson",
     "providerEmail": "emily@skillswap.com",
@@ -68,7 +68,7 @@
     "rating": 4.7,
     "slotsAvailable": 5,
     "description": "Boost your storytelling skills through guided writing exercises and feedback.",
-    "image": "https://i.postimg.cc/PqkP9bGz/creative-writing.png",
+    "image": "https://i.ibb.co.com/Fb5CJFRn/Black-Simple-Cyber-Security-Instagram-Post-3.png",
     "category": "Writing"
   }
 ]

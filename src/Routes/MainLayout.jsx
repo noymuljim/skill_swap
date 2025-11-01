@@ -5,6 +5,9 @@ import Footer from '../components/Footer';
 import TopProvider from '../components/TopProvider';
 import Marquee from 'react-fast-marquee';
 import HowWorks from '../components/HowWorks';
+import Banner from '../components/Banner';
+import CategoryPart from '../components/HomeLayout/CategoryPart';
+
 
 const MainLayout = () => {
     return (
@@ -12,16 +15,25 @@ const MainLayout = () => {
             <header>
                 <Navbar></Navbar>
             </header>
-            <main  className='min-h-[calc(100vh-272px)]'>
-                <Outlet></Outlet>
+            <section>
+                <Banner></Banner>
+            </section>
+            <main className='w-11/12 mx-auto min-h-[calc(100vh-272px)] '>
+               <section>
+                <CategoryPart></CategoryPart>
+               </section>
+               <section className='flex'>
+                 <Outlet></Outlet>
+               </section>
             </main>
-            
+
             <section className='bg-gradient-to-br from-green-500 to-black my-5' >
+                <h1 className='text-3xl font-semibold text-white py-5 flex justify-center'>Our Top Rated Providers</h1>
                 <Marquee className pauseOnHover={true} speed={150}>
                     <div className='w-11/12 mx-auto p-5'>
-                    <TopProvider></TopProvider>
-                </div>
-                </Marquee>    
+                        <TopProvider></TopProvider>
+                    </div>
+                </Marquee>
             </section>
             <section>
                 <HowWorks></HowWorks>
