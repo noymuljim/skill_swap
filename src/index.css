@@ -17,7 +17,7 @@
 }
 
 a.active{
-  @apply bg-secondary text-white font-bold
+  @apply bg-secondary text-white
 }
 
 *{

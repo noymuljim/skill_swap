@@ -6,7 +6,7 @@ import TopProvider from '../components/TopProvider';
 import Marquee from 'react-fast-marquee';
 import HowWorks from '../components/HowWorks';
 import Banner from '../components/Banner';
-import CategoryPart from '../components/HomeLayout/CategoryPart';
+import Upper from '../components/HomeLayout/Upper';
 
 
 const MainLayout = () => {
@@ -19,10 +19,10 @@ const MainLayout = () => {
                 <Banner></Banner>
             </section>
             <main className='w-11/12 mx-auto min-h-[calc(100vh-272px)] '>
+              <section>
+                <Upper></Upper>
+            </section> 
                <section>
-                <CategoryPart></CategoryPart>
-               </section>
-               <section className='flex'>
                  <Outlet></Outlet>
                </section>
             </main>

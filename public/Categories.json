@@ -1,0 +1,15 @@
+[
+   {
+    "id": 0,
+    "name": "All"
+  },
+  { 
+    "id": 1,
+     "name": "Music"
+   },
+  { "id": 2, "name": "Language" },
+  { "id": 3, "name": "Art & Design" },
+  { "id": 4, "name": "Technology" },
+  { "id": 5, "name": "Health & Fitness" },
+  { "id": 6, "name": "Writing" }
+]

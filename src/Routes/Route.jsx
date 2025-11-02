@@ -5,8 +5,7 @@ import AuthLayout from "./AuthLayout";
 import Login from "../components/Login";
 import Register from "../components/Register";
 import Home from "../pages/Home";
-import CategoryNews from "../components/HomeLayout/CategoryNews";
-import Details from "../components/HomeLayout/Details";
+import CategoryNews from "../pages/CategoryNews";
 
 export const router = createBrowserRouter([
   {
@@ -18,19 +17,16 @@ export const router = createBrowserRouter([
         element: <Home></Home>
       },
       {
+        path: '/category/:id',
+        element: <CategoryNews></CategoryNews>,
+        loader: ()=> fetch('/Skills.json')
+      },
+      {
         path: '/profile',
         element: <Profile></Profile>
       },
-      {
-        path: '/category/:id',
-        element: <CategoryNews></CategoryNews>,
-        loader: ()=> fetch("/SkillsData.json")
-      },
-      {
-        path:'/skillDetails/:id',
-        element:<Details></Details>
-      }
-     
+
+
     ]
   },
   {
@@ -48,7 +44,7 @@ export const router = createBrowserRouter([
     ]
   },
   {
-    path:'/skills',
+    path: '/skills',
     element: <h2>skills layout</h2>
   },
   {
