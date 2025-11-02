@@ -5,7 +5,7 @@ import { Outlet } from 'react-router';
 
 const AuthLayout = () => {
     return (
-        <div className=' min-h-screen'>
+        <div className=' min-h-screen bg-gradient-to-br from-green-400 to-black' >
             <header className='mx-auto pb-4'>
                 <Navbar></Navbar>
             </header>

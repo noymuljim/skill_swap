@@ -43,10 +43,8 @@ export const router = createBrowserRouter([
       }
     ]
   },
-  {
-    path: '/skills',
-    element: <h2>skills layout</h2>
-  },
+
+
   {
     path: '*',
     element: <h2>error layout</h2>

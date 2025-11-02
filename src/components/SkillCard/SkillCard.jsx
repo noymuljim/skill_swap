@@ -2,7 +2,7 @@ import React from 'react';
 
 const SkillCard = ({skills}) => {
     return (
-        <div className='p-5 rounded-3xl bg-amber-200 space-y-4'>
+        <div className='p-5 rounded-3xl bg-white space-y-4'>
             <img className='w-[400px] mx-auto rounded-2xl' src={skills.image} alt="" />
             <h1 className='text-2xl font-semibold text-accent'>{skills.skillName}</h1>
             <h1 className=''>Provider:{skills.providerName}</h1>

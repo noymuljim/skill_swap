@@ -11,8 +11,8 @@ import Upper from '../components/HomeLayout/Upper';
 
 const MainLayout = () => {
     return (
-        <div>
-            <header>
+        <div className='bg-base-200'>
+            <header className='sticky top-0'>
                 <Navbar></Navbar>
             </header>
             <section>

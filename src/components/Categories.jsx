@@ -11,7 +11,7 @@ const Categories = () => {
 
             <div className='flex flex-wrap gap-4 mt-6'> 
                 {
-                    categories.map(category=> <NavLink to={`/category/${category.id}`}  key={category.id} className={'btn bg-base-100 border-0 hover:bg-base-200 rounded-3xl'} >{category.name}</NavLink>)
+                    categories.map(category=> <NavLink to={`/category/${category.id}`}  key={category.id} className={'btn  border-0 hover:bg-white rounded-3xl'} >{category.name}</NavLink>)
                 }
             </div>
 
