@@ -1,11 +1,35 @@
-import React, { useState } from 'react';
+import React, { use, useState } from 'react';
 import MyContainer from './MyContainer';
 import { FaEye, FaEyeSlash } from 'react-icons/fa';
 import { Link } from 'react-router';
 import signinLogo from '../assets/signin1.png'
+import { AuthContext } from '../Provider/AuthProvider';
 
 const Login = () => {
+    const { signIn } = use(AuthContext)
     const [show, setShow] = useState(false)
+
+    const handleLogin = (e) => {
+        e.preventDefault()
+        //console.log('login')
+        const form = e.target
+
+        const email = form.email.value;
+        const password = form.password.value;
+        // console.log({ email, password })
+
+        signIn(email, password)
+            .then(result => {
+                const user = result.user;
+                console.log(user)
+
+            })
+            .catch((error) => {
+                const errorCode = error.code;
+                const errorMessage = error.message;
+                alert(errorCode,errorMessage)
+            });
+    }
 
     return (
         <div className=" flex rounded-2xl items-center justify-center ">
@@ -21,7 +45,7 @@ const Login = () => {
 
 
 
-                        <form className="space-y-5">
+                        <form onSubmit={handleLogin} className="space-y-5">
                             <h2 className="text-2xl font-semibold mb-2 text-center text-white">
                                 Login Your Account
                             </h2>
@@ -51,19 +75,19 @@ const Login = () => {
                                 </span>
                             </div>
 
-                           <div className='flex flex-col'>
-                             <button
-                                className="hover:underline cursor-pointer"
-                                // onClick={handleForgetPassword}
-                                type="button"
-                            >
-                                Forget password?
-                            </button>
+                            <div className='flex flex-col'>
+                                <button
+                                    className="hover:underline cursor-pointer"
+                                    // onClick={handleForgetPassword}
+                                    type="button"
+                                >
+                                    Forget password?
+                                </button>
 
-                            <button className="btn">
-                                Login
-                            </button>
-                           </div>
+                                <button type='submit' className="btn">
+                                    Login
+                                </button>
+                            </div>
 
 
                             {/* Divider */}
@@ -92,19 +116,7 @@ const Login = () => {
                                 Continue with Google
                             </button>
 
-                            {/* Github Signin */}
-                            <button
-                                type="button"
-                                // onClick={handleGithubSignin}
-                                className="flex items-center justify-center gap-3 bg-white text-gray-800 px-5 py-2 rounded-lg w-full font-semibold hover:bg-gray-100 transition-colors cursor-pointer"
-                            >
-                                <img
-                                    src="https://img.icons8.com/fluency/48/github.png"
-                                    alt="google"
-                                    className="w-5 h-5"
-                                />
-                                Continue with Github
-                            </button>
+                            
 
                             <p className="text-center text-sm text-white/80 mt-3">
                                 Don’t have an account?{" "}

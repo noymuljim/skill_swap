@@ -1,5 +1,6 @@
 import React from 'react';
 import { FaStar } from 'react-icons/fa6';
+import { Link } from 'react-router';
 
 const SkillCard = ({skills}) => {
     return (
@@ -16,7 +17,7 @@ const SkillCard = ({skills}) => {
                 </div>
             </div>
             <h1 className='text-2xl font-semibold text-accent'>Price: {skills.price}$</h1>
-            <button className='btn btn-secondary btn-outline hover:text-white w-full'>View Details</button>
+            <Link to={`/skill-details/${skills.id}`} className='btn btn-secondary btn-outline hover:text-white w-full'>View Details</Link>
         </div>
     );
 };
