@@ -7,7 +7,7 @@ const Categories = () => {
     const categories =use(categoryPromise)
     return (
         <div>
-            <h2 className='font-bold mt-5'>All Categories {categories.length}</h2>
+            <h2 className='font-bold mt-5'>All Categories</h2>
 
             <div className='flex flex-wrap gap-4 mt-6'> 
                 {

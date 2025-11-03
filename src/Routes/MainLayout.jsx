@@ -12,7 +12,7 @@ import Upper from '../components/HomeLayout/Upper';
 const MainLayout = () => {
     return (
         <div className='bg-base-200'>
-            <header className='sticky top-0'>
+            <header className=''>
                 <Navbar></Navbar>
             </header>
             <section>
@@ -29,7 +29,7 @@ const MainLayout = () => {
 
             <section className='bg-gradient-to-br from-green-500 to-black my-5' >
                 <h1 className='text-3xl font-semibold text-white py-5 flex justify-center'>Our Top Rated Providers</h1>
-                <Marquee className pauseOnHover={true} speed={150}>
+                <Marquee className='flex gap-5' pauseOnHover={true} speed={150}>
                     <div className='w-11/12 mx-auto p-5'>
                         <TopProvider></TopProvider>
                     </div>

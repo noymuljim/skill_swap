@@ -35,18 +35,7 @@
     "description": "Improve your pitch, breathing, and tone control through guided vocal exercises.",
     "image": "https://i.ibb.co.com/gFXrnFJ2/Black-Simple-Cyber-Security-Instagram-Post.png"
   },
-  {
-    "id": "skill004",
-    "category_id": 1,
-    "skillName": "Ukulele Made Easy",
-    "providerName": "Naomi Reed",
-    "providerEmail": "naomi@skillswap.com",
-    "price": 15,
-    "rating": 4.7,
-    "slotsAvailable": 6,
-    "description": "Quickly learn to play popular songs on ukulele, even if you’ve never played before.",
-    "image": "https://i.ibb.co.com/gFXrnFJ2/Black-Simple-Cyber-Security-Instagram-Post.png"
-  },
+
   {
     "id": "skill005",
     "category_id": 1,
@@ -121,42 +110,6 @@
     "image": "https://i.ibb.co.com/21FkL2gb/Blue-and-Black-Modern-Digital-Marketing-Agency-Instagram-Post.png"
   },
 
-  {
-    "id": "skill011",
-    "category_id": 3,
-    "skillName": "Digital Illustration Basics",
-    "providerName": "Nora Kim",
-    "providerEmail": "nora@skillswap.com",
-    "price": 22,
-    "rating": 4.8,
-    "slotsAvailable": 3,
-    "description": "Master drawing tools and creative workflows in Procreate and Photoshop.",
-    "image": "https://i.ibb.co.com/TqnxxvFn/Black-Simple-Cyber-Security-Instagram-Post-1.png"
-  },
-  {
-    "id": "skill012",
-    "category_id": 3,
-    "skillName": "Watercolor Painting for Beginners",
-    "providerName": "Rita Das",
-    "providerEmail": "rita@skillswap.com",
-    "price": 16,
-    "rating": 4.6,
-    "slotsAvailable": 5,
-    "description": "Learn watercolor techniques and create beautiful, expressive paintings.",
-    "image": "https://i.ibb.co.com/TqnxxvFn/Black-Simple-Cyber-Security-Instagram-Post-1.png"
-  },
-  {
-    "id": "skill013",
-    "category_id": 3,
-    "skillName": "Logo Design Fundamentals",
-    "providerName": "Daniel Lee",
-    "providerEmail": "daniel@skillswap.com",
-    "price": 27,
-    "rating": 4.9,
-    "slotsAvailable": 2,
-    "description": "Learn to create memorable and balanced logos using Illustrator or Canva.",
-    "image": "https://i.ibb.co.com/TqnxxvFn/Black-Simple-Cyber-Security-Instagram-Post-1.png"
-  },
   {
     "id": "skill014",
     "category_id": 3,
@@ -255,18 +208,7 @@
     "description": "Morning yoga classes focusing on flexibility and mindfulness.",
     "image": "https://i.ibb.co.com/dNp7Rxp/Black-Simple-Cyber-Security-Instagram-Post-2.png"
   },
-  {
-    "id": "skill022",
-    "category_id": 5,
-    "skillName": "Meditation & Mindfulness",
-    "providerName": "Leah Wong",
-    "providerEmail": "leah@skillswap.com",
-    "price": 14,
-    "rating": 4.9,
-    "slotsAvailable": 5,
-    "description": "Guided meditation practices to reduce stress and improve focus.",
-    "image": "https://i.ibb.co.com/dNp7Rxp/Black-Simple-Cyber-Security-Instagram-Post-2.png"
-  },
+ 
   {
     "id": "skill023",
     "category_id": 5,
@@ -314,54 +256,6 @@
     "rating": 4.7,
     "slotsAvailable": 5,
     "description": "Boost your storytelling skills with guided writing exercises and feedback.",
-    "image": "https://i.ibb.co.com/Fb5CJFRn/Black-Simple-Cyber-Security-Instagram-Post-3.png"
-  },
-  {
-    "id": "skill027",
-    "category_id": 6,
-    "skillName": "Writing for Social Media",
-    "providerName": "Carlos Vega",
-    "providerEmail": "carlos@skillswap.com",
-    "price": 16,
-    "rating": 4.5,
-    "slotsAvailable": 6,
-    "description": "Learn to craft engaging posts and captions that grow your online presence.",
-    "image": "https://i.ibb.co.com/Fb5CJFRn/Black-Simple-Cyber-Security-Instagram-Post-3.png"
-  },
-  {
-    "id": "skill028",
-    "category_id": 6,
-    "skillName": "Copywriting Masterclass",
-    "providerName": "Rachel Green",
-    "providerEmail": "rachel@skillswap.com",
-    "price": 22,
-    "rating": 4.8,
-    "slotsAvailable": 4,
-    "description": "Understand persuasive writing techniques to sell ideas and products effectively.",
-    "image": "https://i.ibb.co.com/Fb5CJFRn/Black-Simple-Cyber-Security-Instagram-Post-3.png"
-  },
-  {
-    "id": "skill029",
-    "category_id": 6,
-    "skillName": "Blog Writing for Beginners",
-    "providerName": "Noah Blake",
-    "providerEmail": "noah@skillswap.com",
-    "price": 14,
-    "rating": 4.6,
-    "slotsAvailable": 5,
-    "description": "Learn to plan, structure, and write engaging blog content for any niche.",
-    "image": "https://i.ibb.co.com/Fb5CJFRn/Black-Simple-Cyber-Security-Instagram-Post-3.png"
-  },
-  {
-    "id": "skill030",
-    "category_id": 6,
-    "skillName": "Fiction Storytelling Techniques",
-    "providerName": "Ivy Brooks",
-    "providerEmail": "ivy@skillswap.com",
-    "price": 20,
-    "rating": 4.9,
-    "slotsAvailable": 3,
-    "description": "Learn character development, plot design, and narrative flow for fiction writing.",
     "image": "https://i.ibb.co.com/Fb5CJFRn/Black-Simple-Cyber-Security-Instagram-Post-3.png"
   }
 ]

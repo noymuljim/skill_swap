@@ -26,7 +26,7 @@ const CategoryNews = () => {
 
     return (
         <div>
-            <h1 className='text-3xl font-bold  my-10'>Popular Skills</h1>
+            <h1 className='text-3xl font-bold  my-10'>Popular Skills({categorySkills.length})</h1>
             <div className='grid grid-cols-1 md:grid-cols-3 gap-5'>
                 {
                     categorySkills.map(skills=> <SkillCard key={skills.id} skills={skills}></SkillCard>)
