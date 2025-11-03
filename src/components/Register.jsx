@@ -1,11 +1,41 @@
-import React, { useState } from 'react';
+import React, { use, useState } from 'react';
 import MyContainer from './MyContainer';
 import { FaEye, FaEyeSlash } from 'react-icons/fa';
 import { Link } from 'react-router';
+import { AuthContext } from '../Provider/AuthProvider';
 
 
 const Login = () => {
+    const { createUser,setUser } = use(AuthContext)
     const [show, setShow] = useState(false)
+
+
+    const handleRegister = (e) => {
+        e.preventDefault()
+        //console.log(e.target)
+
+        const form = e.target
+        const name = form.name.value;
+        const photoURL = form.photo.value;
+        const email = form.email.value;
+        const password = form.password.value;
+        //console.log({ name, photoURL, email, password })
+
+        createUser(email, password)
+            .then(result => {
+                console.log(result.user)
+                setUser(result.user)
+                
+            })
+            .catch((error) => {
+                // const errorCode = error.code;
+                const errorMessage = error.message;
+
+                alert(errorMessage)
+            });
+
+
+    }
 
     return (
         <div className=" flex rounded-2xl items-center justify-center ">
@@ -20,7 +50,7 @@ const Login = () => {
 
 
 
-                        <form className="space-y-5">
+                        <form onSubmit={handleRegister} className="space-y-5">
                             <h2 className="text-2xl font-semibold mb-2 text-center text-white">
                                 Register Now
                             </h2>
@@ -28,12 +58,16 @@ const Login = () => {
                             {/* name */}
                             <div>
                                 <label className="block text-sm mb-1">User Name</label>
-                                <input name='name' type="text" placeholder='Enter your name' />
+                                <input className="input input-bordered w-full bg-white/20 text-white placeholder-white/60 focus:outline-none focus:ring-2 focus:ring-blue-400"
+
+                                    name='name' required type="text" placeholder='Enter your name' />
                             </div>
                             {/* photo url */}
                             <div>
                                 <label className="block text-sm mb-1">Upload Photo</label>
-                                <input name='photo' type="text" placeholder='Photo URL' />
+                                <input className="input input-bordered w-full bg-white/20 text-white placeholder-white/60 focus:outline-none focus:ring-2 focus:ring-blue-400"
+
+                                    name='photo' type="text" required placeholder='Photo URL' />
                             </div>
                             {/* email */}
                             <div>
@@ -42,6 +76,7 @@ const Login = () => {
                                     type="email"
                                     name="email"
                                     placeholder="example@email.com"
+                                    required
                                     className="input input-bordered w-full bg-white/20 text-white placeholder-white/60 focus:outline-none focus:ring-2 focus:ring-blue-400"
                                 />
                             </div>
@@ -53,6 +88,7 @@ const Login = () => {
                                     type={show ? "text" : "password"}
                                     name="password"
                                     placeholder="••••••••"
+                                    required
                                     className="input input-bordered w-full bg-white/20 text-white placeholder-white/60 focus:outline-none focus:ring-2 focus:ring-blue-400"
                                 />
                                 <span onClick={() => setShow(!show)} className="absolute right-[8px] top-[36px] cursor-pointer z-50">
@@ -61,10 +97,10 @@ const Login = () => {
                                 </span>
                             </div>
 
-                          
 
-                            <button className="btn">
-                               Register
+
+                            <button type='submit' className="btn w-full">
+                                Register
                             </button>
 
 
@@ -79,7 +115,7 @@ const Login = () => {
 
 
                             <p className="text-center text-sm text-white/80 mt-3">
-                               Already have an account?{" "}
+                                Already have an account?{" "}
                                 <Link
                                     to="/auth/login"
                                     className="text-white font-bold hover:text-white underline"

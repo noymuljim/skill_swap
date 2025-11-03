@@ -1,9 +1,13 @@
-import React, { Suspense } from 'react';
+import React, { Suspense} from 'react';
 import Categories from '../Categories';
 
 const Upper = () => {
-    return (
+
+   
+  return (
         <div>
+           
+          
             <Suspense fallback={<span className="loading loading-dots loading-lg"></span>
             }>
                 <Categories></Categories>

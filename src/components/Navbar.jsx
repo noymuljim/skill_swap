@@ -36,7 +36,7 @@ const Navbar = () => {
             </div>
             <div className="flex gap-4 items-center">
                 <img className='w-[33px] h-[33px] rounded-full' src="https://img.icons8.com/parakeet/48/user.png" alt="" />
-                <Link to="auth/login" className="btn rounded-3xl px-10 bg-primary text-white" >Login</Link>
+                <Link to="/auth/login" className="btn rounded-3xl px-10 bg-primary text-white" >Login</Link>
               
             </div>
             </MyContainer>
