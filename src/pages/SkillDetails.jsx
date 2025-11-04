@@ -17,7 +17,7 @@ const SkillDetails = () => {
 
     return (
         <div>
-            <header className='sticky top-0'>
+            <header className=''>
                 <Navbar></Navbar>
             </header>
 
@@ -30,7 +30,7 @@ const SkillDetails = () => {
                 <p className='text-gray-400 mb-5'>{skills.slogan}</p>
             </div>
             <main className="w-11/12 mx-auto flex flex-col md:flex-row gap-5">
-                {/* Left Column */}
+              
                 <div className="flex-1 p-5 rounded-2xl mb-5 bg-base-200">
                     {skills.image && (
                         <img
@@ -44,7 +44,7 @@ const SkillDetails = () => {
                 </div>
 
 
-                <div className="w-full md:w-1/3 self-start sticky top-20 space-y-5 p-5 rounded-2xl bg-base-100">
+                <div className="w-full md:w-1/3 self-start sticky top-20 space-y-5 p-5 ">
                     <div>
                         <h1 className="font-semibold text-2xl">{skills.skillName}</h1>
                         <p>{skills.providerName}</p>

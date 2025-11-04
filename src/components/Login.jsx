@@ -1,5 +1,4 @@
 import React, { use, useState } from 'react';
-import MyContainer from './MyContainer';
 import { FaEye, FaEyeSlash } from 'react-icons/fa';
 import { Link } from 'react-router';
 import signinLogo from '../assets/signin1.png'
@@ -35,8 +34,8 @@ const Login = () => {
         <div className=" flex rounded-2xl items-center justify-center ">
 
 
-            <MyContainer>
-                <div className=" flex justify-center z-10 gap-10 p-6 lg:p-10 text-white">
+          <div className='w-11/12 mx-auto'>
+           <div className=" flex justify-center z-10 gap-10 p-6 lg:p-10 text-white">
                     {/* Left section */}
                     <img src={signinLogo} alt="" />
 
@@ -131,7 +130,7 @@ const Login = () => {
 
                     </div>
                 </div>
-            </MyContainer>
+          </div>
         </div>
     );
 };

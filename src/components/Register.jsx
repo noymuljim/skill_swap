@@ -1,12 +1,12 @@
 import React, { use, useState } from 'react';
-import MyContainer from './MyContainer';
+
 import { FaEye, FaEyeSlash } from 'react-icons/fa';
 import { Link } from 'react-router';
 import { AuthContext } from '../Provider/AuthProvider';
 
 
 const Login = () => {
-    const { createUser,setUser } = use(AuthContext)
+    const { createUser, setUser } = use(AuthContext)
     const [show, setShow] = useState(false)
 
 
@@ -25,7 +25,7 @@ const Login = () => {
             .then(result => {
                 console.log(result.user)
                 setUser(result.user)
-                
+
             })
             .catch((error) => {
                 // const errorCode = error.code;
@@ -41,7 +41,8 @@ const Login = () => {
         <div className=" flex rounded-2xl items-center justify-center ">
 
 
-            <MyContainer>
+            <div className='w-11/12 mx-auto'>
+
                 <div className=" flex justify-center z-10 gap-10 p-6 lg:p-10 text-white">
 
 
@@ -127,7 +128,9 @@ const Login = () => {
 
                     </div>
                 </div>
-            </MyContainer>
+            </div>
+
+
         </div>
     );
 };

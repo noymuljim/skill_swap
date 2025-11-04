@@ -7,6 +7,7 @@ import Register from "../components/Register";
 import Home from "../pages/Home";
 import CategoryNews from "../pages/CategoryNews";
 import SkillDetails from "../pages/SkillDetails";
+import PrivateRoute from "../provider/PrivateRoute";
 
 export const router = createBrowserRouter([
   {
@@ -22,13 +23,15 @@ export const router = createBrowserRouter([
         element: <CategoryNews></CategoryNews>,
         loader: () => fetch('/Skills.json')
       },
-      {
-        path: '/profile',
-        element: <Profile></Profile>
-      },
+
 
 
     ]
+  },
+
+  {
+    path: '/profile',
+    element: <Profile></Profile>
   },
 
   {
@@ -47,9 +50,10 @@ export const router = createBrowserRouter([
   },
   {
     path: '/skill-details/:id',
-    element: 
-      <SkillDetails></SkillDetails>,
-   
+    element: <PrivateRoute>
+      <SkillDetails></SkillDetails>
+    </PrivateRoute>,
+
     loader: () => fetch('/Skills.json')
   },
 

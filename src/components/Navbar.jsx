@@ -1,7 +1,6 @@
 import React, { use } from 'react';
 import logo from '../assets/digital_tech_book_logo_design_template-removebg-preview.png'
 import MyLinks from './MyLinks';
-import MyContainer from './MyContainer';
 import { Link } from 'react-router';
 import { AuthContext } from '../Provider/AuthProvider';
 
@@ -27,9 +26,11 @@ const Navbar = () => {
     </>
 
     return (
-        <div className="navbar bg-base-100 ">
-            <MyContainer className='flex justify-between items-center'>
-                
+        <div className="navbar bg-base-100 shadow-sm">
+
+            <div className='w-11/12 mx-auto flex justify-between items-center'>
+
+      
                   <div className="navbar-start">
                 <div className="dropdown">
                     <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -60,9 +61,12 @@ const Navbar = () => {
                 }
               
             </div>
-            </MyContainer>
-          
+        
         </div>
+
+            </div>
+           
+          
     );
 };
 
