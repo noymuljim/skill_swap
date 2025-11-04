@@ -1,6 +1,6 @@
 import React, { use } from 'react';
-import { AuthContext } from '../Provider/AuthProvider';
 import Navbar from '../components/Navbar';
+import { AuthContext } from '../Provider/AuthProvider';
 
 const Profile = () => {
     const { user } = use(AuthContext)

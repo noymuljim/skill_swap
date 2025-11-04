@@ -7,7 +7,7 @@ const SkillDetails = () => {
     const data = useLoaderData();
     const { id } = useParams()
 
-    console.log(data, id)
+  //  console.log(data, id)
     const [skills, setSkills] = useState({})
 
     useEffect(() => {

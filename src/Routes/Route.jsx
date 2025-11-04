@@ -8,7 +8,6 @@ import Home from "../pages/Home";
 import CategoryNews from "../pages/CategoryNews";
 import SkillDetails from "../pages/SkillDetails";
 import PrivateRoute from "../provider/PrivateRoute";
-
 export const router = createBrowserRouter([
   {
     path: "/",

@@ -1,12 +1,15 @@
 import React, { use, useState } from 'react';
 import { FaEye, FaEyeSlash } from 'react-icons/fa';
-import { Link } from 'react-router';
+import { Link, useLocation, useNavigate } from 'react-router';
 import signinLogo from '../assets/signin1.png'
 import { AuthContext } from '../Provider/AuthProvider';
 
 const Login = () => {
     const { signIn } = use(AuthContext)
     const [show, setShow] = useState(false)
+    const location=useLocation()
+    //console.log(location)
+    const navigate=useNavigate()
 
     const handleLogin = (e) => {
         e.preventDefault()
@@ -21,6 +24,7 @@ const Login = () => {
             .then(result => {
                 const user = result.user;
                 console.log(user)
+                navigate(`${location.state? location.state : '/'}`)
 
             })
             .catch((error) => {
