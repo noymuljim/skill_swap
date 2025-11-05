@@ -1,4 +1,4 @@
-import { createUserWithEmailAndPassword, onAuthStateChanged, signInWithEmailAndPassword, signOut } from 'firebase/auth';
+import { createUserWithEmailAndPassword, onAuthStateChanged, signInWithEmailAndPassword, signOut, updateProfile } from 'firebase/auth';
 import React, { createContext, useEffect, useState } from 'react';
 import app from '../firebase/Firebase.config';
 export const AuthContext = createContext();
@@ -12,7 +12,9 @@ const AuthProvider = ({ children }) => {
     //console.log(user)
     const [loading, setLoading] = useState(true)
    
-    
+    const updateUser=(updatedData)=>{
+        return updateProfile(auth.currentUser, updatedData)
+    }
 
 
     const createUser = (email, password) => {
@@ -53,6 +55,7 @@ const AuthProvider = ({ children }) => {
         logOut,
         signIn,
         loading,setLoading,
+        updateUser,
     }
     return <AuthContext value={authData}> {children}</AuthContext>
 };

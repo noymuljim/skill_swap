@@ -5,6 +5,7 @@ import signinLogo from '../assets/signin1.png'
 import { AuthContext } from '../Provider/AuthProvider';
 
 const Login = () => {
+    const [error,setError]=useState('')
     const { signIn } = use(AuthContext)
     const [show, setShow] = useState(false)
     const location=useLocation()
@@ -29,8 +30,9 @@ const Login = () => {
             })
             .catch((error) => {
                 const errorCode = error.code;
-                const errorMessage = error.message;
-                alert(errorCode,errorMessage)
+              //  const errorMessage = error.message;
+               // alert(errorCode,errorMessage)
+               setError(errorCode)
             });
     }
 
@@ -59,6 +61,7 @@ const Login = () => {
                                     type="email"
                                     name="email"
                                     placeholder="example@email.com"
+                                    required
                                     className="input input-bordered w-full bg-white/20 text-white placeholder-white/60 focus:outline-none focus:ring-2 focus:ring-blue-400"
                                 />
                             </div>
@@ -70,6 +73,7 @@ const Login = () => {
                                     type={show ? "text" : "password"}
                                     name="password"
                                     placeholder="••••••••"
+                                    required
                                     className="input input-bordered w-full bg-white/20 text-white placeholder-white/60 focus:outline-none focus:ring-2 focus:ring-blue-400"
                                 />
                                 <span onClick={() => setShow(!show)} className="absolute right-[8px] top-[36px] cursor-pointer z-50">
@@ -90,6 +94,7 @@ const Login = () => {
                                 <button type='submit' className="btn">
                                     Login
                                 </button>
+                                {error && <p className='text-orange-500'>{error}</p>}
                             </div>
 
 

@@ -3,6 +3,7 @@ import logo from '../assets/digital_tech_book_logo_design_template-removebg-prev
 import MyLinks from './MyLinks';
 import { Link } from 'react-router';
 import { AuthContext } from '../Provider/AuthProvider';
+import userIcon from '../assets/3607444.png'
 
 const Navbar = () => {
     const{user,logOut}=use(AuthContext)
@@ -54,9 +55,7 @@ const Navbar = () => {
             </div>
             <div className="flex gap-4 items-center">
 
-               {
-                user?  <img className='w-[33px] h-[33px] rounded-full' src="https://img.icons8.com/parakeet/48/user.png" alt="" />: ''
-               }
+               <img className='w-12 h-12 rounded-full' src={`${user? user.photoURL : userIcon}`} alt="" />
                
                {
                     user ? <button onClick={handleLogOut} className="btn rounded-3xl px-10 bg-primary text-white">LogOut</button>  : <Link to="/auth/login" className="btn rounded-3xl px-10 bg-primary text-white" >Login</Link>
