@@ -7,6 +7,7 @@ import Marquee from 'react-fast-marquee';
 import HowWorks from '../components/HowWorks';
 import Banner from '../components/Banner';
 import Upper from '../components/HomeLayout/Upper';
+import DownloadApp from '../components/DownloadApp';
 
 
 const MainLayout = () => {
@@ -19,12 +20,12 @@ const MainLayout = () => {
                 <Banner></Banner>
             </section>
             <main className='w-11/12 mx-auto min-h-[calc(100vh-272px)] '>
-              <section>
-                <Upper></Upper>
-            </section> 
-               <section>
-                 <Outlet></Outlet>
-               </section>
+                <section>
+                    <Upper></Upper>
+                </section>
+                <section>
+                    <Outlet></Outlet>
+                </section>
             </main>
 
             <section className='bg-gradient-to-br from-green-500 to-black my-5' >
@@ -37,6 +38,10 @@ const MainLayout = () => {
             </section>
             <section>
                 <HowWorks></HowWorks>
+            </section>
+            <DownloadApp></DownloadApp>
+            <section>
+
             </section>
             <footer>
                 <Footer></Footer>

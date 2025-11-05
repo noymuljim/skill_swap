@@ -20,7 +20,10 @@ const Navbar = () => {
     const links=<>
     <div className='space-x-5 mr-10 flex flex-col md:flex-row'>
             <MyLinks to={'/'}>Home</MyLinks>
-            <MyLinks to={'/profile'}>Profile</MyLinks>
+            {
+                user? <MyLinks to={'/profile'}>Profile</MyLinks>:""
+            }
+           
         </div>
         
     </>

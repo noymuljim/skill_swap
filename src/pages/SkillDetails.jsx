@@ -1,19 +1,40 @@
-import React, { useEffect, useState } from 'react';
+import React, { use, useEffect, useState } from 'react';
 import Navbar from '../components/Navbar';
 import { Link, useLoaderData, useParams } from 'react-router';
 import Footer from '../components/Footer';
+import { toast } from 'react-toastify';
+import { AuthContext } from '../Provider/AuthProvider';
+import Loading from '../components/Loading';
 
 const SkillDetails = () => {
     const data = useLoaderData();
     const { id } = useParams()
 
-  //  console.log(data, id)
+    //  console.log(data, id)
     const [skills, setSkills] = useState({})
+
+
+
 
     useEffect(() => {
         const skillDetails = data.find(singleSkill => singleSkill.id == id)
         setSkills(skillDetails)
     }, [id, data])
+
+
+
+    const { loading } = use(AuthContext)
+
+    if (loading) {
+        return <Loading></Loading>
+    }
+
+
+    const handleForm = (e) => {
+        e.preventDefault()
+        toast.success('Booking successful')
+        return;
+    }
 
     return (
         <div>
@@ -30,7 +51,7 @@ const SkillDetails = () => {
                 <p className='text-gray-400 mb-5'>{skills.slogan}</p>
             </div>
             <main className="w-11/12 mx-auto flex flex-col md:flex-row gap-5">
-              
+
                 <div className="flex-1 p-5 rounded-2xl mb-5 bg-base-200">
                     {skills.image && (
                         <img
@@ -59,7 +80,9 @@ const SkillDetails = () => {
 
                     <div className='bg-green-200'>
 
-                        <form className='p-4 space-y-4'>
+
+
+                        <form onSubmit={handleForm} className='p-4 space-y-4'>
                             <div>
                                 <label className="block text-sm mb-1">Name</label>
                                 <input
@@ -93,10 +116,14 @@ const SkillDetails = () => {
                 <Link to={`/category/${skills.category_id}`} className='btn btn-primary my-4 px-20 rounded-3xl hover:bg-secondary'>Explore More</Link>
             </div>
 
+           
             <Footer></Footer>
+            
 
         </div>
+        
     );
+    
 };
 
 export default SkillDetails;
