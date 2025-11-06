@@ -34,7 +34,12 @@ const Login = () => {
                // alert(errorCode,errorMessage)
                setError(errorCode)
             });
+
+
+
     }
+
+
 
     return (
         <div className=" flex rounded-2xl items-center justify-center ">
@@ -112,7 +117,7 @@ const Login = () => {
 
                             {/* Google Signin */}
                             <button
-                                type="button"
+                                type="submit"
                                 // onClick={handleGoogleSignin}
                                 className="flex items-center justify-center gap-3 bg-white text-gray-800 px-5 py-2 rounded-lg w-full font-semibold hover:bg-gray-100 transition-colors cursor-pointer"
                             >

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Outlet } from 'react-router';
+import { Outlet, useNavigation } from 'react-router';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import TopProvider from '../components/TopProvider';
@@ -8,9 +8,11 @@ import HowWorks from '../components/HowWorks';
 import Banner from '../components/Banner';
 import Upper from '../components/HomeLayout/Upper';
 import DownloadApp from '../components/DownloadApp';
+import Loading from '../components/Loading';
 
 
 const MainLayout = () => {
+    const { state } = useNavigation()
     return (
         <div className='bg-base-200'>
             <header className='sticky top-0'>
@@ -24,7 +26,9 @@ const MainLayout = () => {
                     <Upper></Upper>
                 </section>
                 <section>
-                    <Outlet></Outlet>
+
+                    {state === 'loading' ? <Loading /> : <Outlet />}
+
                 </section>
             </main>
 
