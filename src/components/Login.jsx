@@ -1,15 +1,18 @@
-import React, { use, useState } from 'react';
+import React, { use, useRef, useState } from 'react';
 import { FaEye, FaEyeSlash } from 'react-icons/fa';
 import { Link, useLocation, useNavigate } from 'react-router';
 import signinLogo from '../assets/signin1.png'
 import { AuthContext } from '../Provider/AuthProvider';
+import { toast } from 'react-toastify';
 
 const Login = () => {
     const [error,setError]=useState('')
-    const { signIn } = use(AuthContext)
+    const { signIn,googleLogin,resetPassword } = use(AuthContext)
     const [show, setShow] = useState(false)
     const location=useLocation()
     //console.log(location)
+
+    const emailRef=useRef(null)
     const navigate=useNavigate()
 
     const handleLogin = (e) => {
@@ -39,6 +42,38 @@ const Login = () => {
 
     }
 
+    const handleGoogleSignin=()=>{
+  googleLogin()
+    .then(result => {
+      const user = result.user;
+      console.log(user);
+      navigate(location.state ? location.state : '/');
+    })
+    .catch(error => {
+      console.error(error);
+      setError(error.code);
+    });
+};
+
+const handleForgetPassword = (e) => {
+    e.preventDefault();
+    const email = emailRef.current.value; // get value from ref
+
+    if (!email) {
+        toast.error(' Please enter your email first!');
+        return;
+    }
+
+    resetPassword(email)
+        .then(() => {
+            toast.success('Check your email to reset your password');
+        })
+        .catch((error) => {
+           // console.error(error);
+            toast.error(` ${error.message}`);
+        });
+};
+
 
 
     return (
@@ -66,6 +101,7 @@ const Login = () => {
                                     type="email"
                                     name="email"
                                     placeholder="example@email.com"
+                                    ref={emailRef}
                                     required
                                     className="input input-bordered w-full bg-white/20 text-white placeholder-white/60 focus:outline-none focus:ring-2 focus:ring-blue-400"
                                 />
@@ -90,7 +126,7 @@ const Login = () => {
                             <div className='flex flex-col'>
                                 <button
                                     className="hover:underline cursor-pointer"
-                                    // onClick={handleForgetPassword}
+                                     onClick={handleForgetPassword}
                                     type="button"
                                 >
                                     Forget password?
@@ -117,8 +153,8 @@ const Login = () => {
 
                             {/* Google Signin */}
                             <button
-                                type="submit"
-                                // onClick={handleGoogleSignin}
+                                type="button"
+                                 onClick={handleGoogleSignin}
                                 className="flex items-center justify-center gap-3 bg-white text-gray-800 px-5 py-2 rounded-lg w-full font-semibold hover:bg-gray-100 transition-colors cursor-pointer"
                             >
                                 <img

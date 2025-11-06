@@ -3,6 +3,7 @@ import React, { use, useState } from 'react';
 import { FaEye, FaEyeSlash } from 'react-icons/fa';
 import { Link, useNavigate } from 'react-router';
 import { AuthContext } from '../Provider/AuthProvider';
+import { toast } from 'react-toastify';
 
 
 const Login = () => {
@@ -20,6 +21,13 @@ const navigate =useNavigate()
         const email = form.email.value;
         const password = form.password.value;
         //console.log({ name, photoURL, email, password })
+
+        const regExp=/^(?=.*[a-z])(?=.*[A-Z]).{6,}$/
+
+        if(!regExp.test(password)){
+            toast.error('Password must be at least 6 characters long and include both uppercase and lowercase letters');
+            return
+        }
 
         createUser(email, password)
             .then(result => {
@@ -55,7 +63,7 @@ const navigate =useNavigate()
                 <div className=" flex justify-center z-10 gap-10 p-6 lg:p-10 text-white">
 
 
-                    {/* Login card */}
+                    {/*registration card */}
                     <div className="w-full max-w-md backdrop-blur-lg bg-white/10 border border-white/20 shadow-2xl rounded-2xl p-8">
 
 
