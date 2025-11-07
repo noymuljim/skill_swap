@@ -82,8 +82,8 @@ const handleForgetPassword = (e) => {
 
           <div className='w-11/12 mx-auto'>
            <div className=" flex justify-center z-10 gap-10 p-6 lg:p-10 text-white">
-                    {/* Left section */}
-                    <img src={signinLogo} alt="" />
+                   
+                  
 
                     {/* Login card */}
                     <div className="w-full max-w-md backdrop-blur-lg bg-white/10 border border-white/20 shadow-2xl rounded-2xl p-8">
